@@ -1,5 +1,5 @@
 import "./HomePageStyles.css";
-import AtlanLogo from "../assets/AtlanLogo.svg";
+import AtlanLogo from "../../assets/AtlanLogo.svg";
 import { Link } from "react-router-dom";
 
 const Home = () => {
