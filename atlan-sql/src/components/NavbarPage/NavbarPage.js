@@ -61,7 +61,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
       <nav className={`${scrolled ? "scrolled" : ""}`}>
         <div className={`nav-main`}>
           <span onClick={logoClick} className='nav-brand'>
-            <span className='nav-brand-text'>Atlan SQL Editor</span>
+            <span className='nav-brand-text'>Atlan QueryCraft</span>
           </span>
           <ul className={`nav-links`}>
             {links.map((link, index) => {
