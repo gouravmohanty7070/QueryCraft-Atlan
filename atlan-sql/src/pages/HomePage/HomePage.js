@@ -12,7 +12,7 @@ const Home = () => {
           Accelerate Your SQL Queries Like Never Before. 
           Experience the Joy of Effortless Query Writing.
           </h2>
-          <Link to='/query'>
+          <Link to='/editor'>
             <button className='home__button'>Hop In</button>
           </Link>
         </div>

@@ -21,14 +21,14 @@ function Editor() {
   );
 
   return (
-    <div className='editor'>
+    <div className='App-Editor'>
       <MainContext.Provider value={contextValue}>
-        <div className='editor__content'>
-          <div className='editor__row'>
-            <div className='editor__col--3'>
+        <div className='content'>
+          <div className='row'>
+            <div className='col-md-3'>
               <SideBar />
             </div>
-            <div className='editor__col--9 editor__col--12-mobile editor__area'>
+            <div className='col-md-9 col-12 editor-area'>
               <CodeMirror />
               <Output />
             </div>

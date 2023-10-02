@@ -16,13 +16,13 @@ const Editor = () => {
 
   return (
     <div className='editor'>
-      <div className='editor__row'>
-        <div className='editor__col--main'>
+      <div className='row'>
+        <div className='col-md-8 col-lg-9 col-xl-10 col-12 no-gutters'>
           <CodeMirror
             value={query}
             name='Editor'
             onBeforeChange={(editor, data, value) => setQuery(value)}
-            className='editor__code-mirror-wrapper'
+            className='code-mirror-wrapper'
             options={{
               lint: true,
               mode: "sql",
@@ -34,11 +34,11 @@ const Editor = () => {
             }}
             aria-label='code-editor'
           />
-          <p style={{ fontSize: "0.8rem" }} className='editor__note'>
+          <p style={{ fontSize: "0.8rem" }} className='text-2 pt-3 mb-0'>
             <strong>NOTE: </strong>Click on a Previously Saved Query to Begin.
           </p>
         </div>
-        <div className='editor__col--panel'>
+        <div className='col-md-4 col-lg-3 col-xl-2'>
           <EditorPanel />
         </div>
       </div>

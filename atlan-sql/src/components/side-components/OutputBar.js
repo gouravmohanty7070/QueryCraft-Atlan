@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import MainContext from "../../MainContext";
-import Column from "./Column";
+import ColumnDetails from "./Column";
 import Table from "./Table";
 import { CSVLink } from "react-csv";
 
@@ -13,37 +13,38 @@ const Output = () => {
   };
 
   return (
-    <div className='output__results'>
+    <div className='query-results'>
       {queryHistory.outputData.length > 0 ? (
         <>
-          <div className='output__tab-bar'>
+          <div className='tab-bar'>
             <span
-              className={`output__tabs ${tab === 0 ? "output__active" : ""} output__cursor-pointer`}
+              className={`tabs ${tab === 0 ? "active" : ""} cursor-pointer`}
               onClick={() => setTab(0)}
             >
               Output
             </span>
             <span
-              className={`output__tabs ${tab === 1 ? "output__active" : ""} output__cursor-pointer`}
+              className={`tabs ${tab === 1 ? "active" : ""} cursor-pointer`}
               onClick={() => setTab(1)}
             >
               Table Data
             </span>
           </div>
-          <div className='output__details'>
-            <p className='output__text'>
+          <div className='query-details'>
+            <p className='text-2'>
+              {/* Showing{" "} */}
               <span>
                 {tab === 0
                   ? queryHistory.outputData.length
                   : Object.keys(queryHistory.outputData[0]).length}
               </span>{" "}
               rows in Set
-              <span className='output__time'>
+              <span style={{ fontSize: "0.9rem" }} className='text-1'>
                 {" "}
                 (0.03sec)
               </span>
             </p>
-            <div className='output__export-btn'>
+            <div className='export-btn'>
               <CSVLink
                 data={queryHistory.outputData}
                 filename={"dataOutput.csv"}
@@ -57,11 +58,11 @@ const Output = () => {
           {tab === 0 ? (
             <Table result={queryHistory.outputData}></Table>
           ) : (
-            <Column result={queryHistory.outputData} />
+            <ColumnDetails result={queryHistory.outputData} />
           )}
         </>
       ) : (
-        <div className='output__placeholder'>
+        <div className='placeholder-text'>
           <span className='fa fa-play'></span>
           <p>Run Something &#38; Your Output Shall Appear!</p>
         </div>

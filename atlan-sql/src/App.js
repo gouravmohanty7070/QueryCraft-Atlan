@@ -6,7 +6,7 @@ import Load from "./components/load/load";
 const Home = lazy(() => import("./pages/HomePage/HomePage"));
 const Navbar = lazy(() => import("./components/NavbarPage/NavbarPage"));
 const Github = lazy(() => import("./components/Git/Git"));
-const Query = lazy(() => import("./pages/QueryPage/Query"));
+const Editor = lazy(() => import("./pages/QueryPage/Query"));
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -25,7 +25,7 @@ function App() {
         <Router>
           <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
           <Route path='/' exact component={Home} />
-          <Route path='/query' exact component={Query} />
+          <Route path='/editor' exact component={Editor} />
           <Route path='/git' exact component={Github} />
         </Router>
       </Suspense>

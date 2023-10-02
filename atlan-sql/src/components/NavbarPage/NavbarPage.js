@@ -13,15 +13,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
     },
     {
       title: "QueryCraft",
-      link: "/query",
-    },
-    {
-      title: "Contact Us",
-      link: "/",
-    },
-    {
-      title: "Login",
-      link: "/",
+      link: "/editor",
     },
     {
       title: "Github",
