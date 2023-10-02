@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import MainContext from "../../MainContext";
-import ColumnDetails from "./ColumnDetails";
+import Column from "./Column";
 import Table from "./Table";
 import { CSVLink } from "react-csv";
 
@@ -57,7 +57,7 @@ const Output = () => {
           {tab === 0 ? (
             <Table result={queryHistory.outputData}></Table>
           ) : (
-            <ColumnDetails result={queryHistory.outputData} />
+            <Column result={queryHistory.outputData} />
           )}
         </>
       ) : (
